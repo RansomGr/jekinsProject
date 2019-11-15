@@ -30,7 +30,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh label: '', script: 'mvn test'
+               sh label: '', script: 'mvn test'
             }
         }
         stage("Deploy") {
