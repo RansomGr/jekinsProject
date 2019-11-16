@@ -33,6 +33,12 @@ pipeline {
                sh label: '', script: 'mvn test'
             }
         }
+         stage('mail') {
+            steps {
+               sh label: '', script: 'emailext body: 'test', subject: 'test', to: 'anis.helaoui@esprit.tn''
+            }
+        }
+        
         stage("Deploy") {
             steps {
                 script {
