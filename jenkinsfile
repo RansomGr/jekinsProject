@@ -36,7 +36,7 @@ pipeline {
         
                           stage('Email Notification') {
           steps {
-                  mail bcc: '',  body: '''test anis ,
+                  mail bcc: '',  body: '''test anis mail ,
 Welcome to  '''+  env.JOB_NAME + ''' email alerts .
 Thanks for this amazing work''', cc: '', from: '', replyTo: '',subject:currentBuild.currentResult + " : " + env.JOB_NAME, to:  'anis.helaoui@esprit.tn'
        }
